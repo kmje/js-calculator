@@ -9,3 +9,21 @@ let divide = (a, b) => {
 }   
 
 let operate = (operator, num1, num2) => operator(num1, num2);
+const display = document.querySelector('#calc-screen');
+const numPress = document.querySelectorAll('.num-button');
+const operatorPress = document.querySelector('.operator-button');
+numPress.forEach(numButton => {
+    numButton.addEventListener('click', () => {
+        if(display.innerHTML == "0"){
+            display.innerHTML = numButton.innerHTML;
+        }
+        else{
+            display.append(numButton.innerHTML);
+        }
+    })
+})
+operatorPress.forEach(operatorButton => {
+    operatorButton.addEventListener('click', () => {
+        
+    })
+})
